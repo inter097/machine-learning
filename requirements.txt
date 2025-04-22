@@ -3,3 +3,10 @@ pandas
 scikit-learn
 streamlit
 numpy
+matplotlib.pyplot
+seaborn
+sklearn.metrics
+streamlit
+
+
+
