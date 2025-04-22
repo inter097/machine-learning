@@ -3,9 +3,9 @@ pandas
 scikit-learn
 streamlit
 numpy
-matplotlib.pyplot
+matplotlib
 seaborn
-sklearn.metrics
+sklearn
 streamlit
 
 
