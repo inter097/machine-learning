@@ -69,13 +69,14 @@ for idx, nombre_modelo in enumerate(modelos.keys()):
             y_pred = modelo.predict(X_test)
             cm = confusion_matrix(y_test, y_pred)
 
-            fig, ax = plt.subplots()
+            fig, ax = plt.subplots(figsize=(3, 3)) # Ajustar el tamaño de la figura
             sns.heatmap(cm, annot=True, fmt='g', cmap='Blues',
                         xticklabels=["Negativo", "Positivo"],
                         yticklabels=["Negativo", "Positivo"], ax=ax)
             ax.set_title("Matriz de Confusión (test set)")
             ax.set_xlabel("Predicción")
             ax.set_ylabel("Real")
+            ax.tick_params(labelsize=8)  # Letra más chica en ejes
             st.pyplot(fig)
 
 # ------------------ Comparación entre modelos ------------------
@@ -142,7 +143,12 @@ if mostrar_matriz:
 
     elif opcion_vista == "Tiempo de inferencia":
         fig, ax = plt.subplots()
-        pd.Series(tiempos).plot(kind='bar', ax=ax)
+        tiempos_series = pd.Series(tiempos)
+        tiempos_series.plot(kind='bar', ax=ax)
+
+        for i, v in enumerate(tiempos_series):
+            ax.text(i, v + 0.0005, f"{v:.4f}s", ha='center', va='bottom', fontsize=9)
+
         ax.set_ylabel("Segundos")
         ax.set_title("Tiempo de predicción por modelo")
         st.pyplot(fig)
