@@ -12,8 +12,10 @@ modelos = {
     'Naive Bayes': joblib.load('modelos/modelo_nb.pkl'),
     'KNN': joblib.load('modelos/modelo_knn.pkl'),
     'Árbol de Decisión': joblib.load('modelos/modelo_arbol.pkl'),
-    'SVM': joblib.load('modelos/modelo_svm.pkl')
+    'SVM': joblib.load('modelos/modelo_svm.pkl'),
+    'Red Neuronal MLP': joblib.load('modelos/modelo_mlp.pkl')  # 👈 nuevo modelo
 }
+
 
 # Cargar scaler único
 scaler = joblib.load('modelos/scaler.pkl')
