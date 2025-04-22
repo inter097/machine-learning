@@ -33,6 +33,10 @@ st.title("Predicción de Ataques Cardíacos")
 st.markdown("Este sistema predice la probabilidad de un ataque cardíaco en base a los valores de Edad, CK-MB y Troponina.")
 st.markdown("Ingrese los valores **sin transformar**, el sistema los transformará internamente.")
 
+if mostrar_matriz:
+    st.markdown("**Nota:** Las matrices de confusión se mostrarán solo si se cargan los datos de test.")
+else:
+    st.markdown("**Nota:** Las matrices de confusión no están disponibles porque no se cargaron los datos de test.")
 # Inputs del usuario
 edad = st.number_input("Edad", min_value=0, max_value=120, value=45)
 ckmb = st.number_input("CK-MB", value=2.86, min_value=0.00, format="%.2f")
@@ -75,6 +79,7 @@ for idx, nombre_modelo in enumerate(modelos.keys()):
             st.pyplot(fig)
 
 # ------------------ Comparación entre modelos ------------------
+
 
 st.markdown("---")
 st.subheader("🔍 Comparación entre modelos")
