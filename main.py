@@ -82,15 +82,15 @@ st.subheader("🔍 Comparación entre modelos")
 opcion_vista = st.radio(
     "Selecciona una visualización",
     [
-        "Ninguna",
         "Resumen de métricas",
         "Accuracy por modelo",
         "Matrices de confusión",
         "Tiempo de inferencia"
-    ]
+    ],
+    index=0  # muestra por defecto "Resumen de métricas"
 )
 
-if mostrar_matriz and opcion_vista != "Ninguna":
+if mostrar_matriz:
     resumen = []
     tiempos = {}
     matrices = {}
