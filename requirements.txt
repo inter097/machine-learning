@@ -5,7 +5,7 @@ scikit-learn
 streamlit
 matplotlib
 seaborn
-
+plotly
 
 
 
