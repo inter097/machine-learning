@@ -38,47 +38,53 @@ st.markdown("")
 st.markdown("")
 
 st.markdown("""
-Esta aplicación utiliza técnicas de **Aprendizaje Automático (Machine Learning)** para **predecir el riesgo de un ataque cardíaco** en pacientes, a partir de tres biomarcadores clínicos fundamentales:
+    Esta aplicación utiliza técnicas de **Aprendizaje Automático (Machine Learning)** para **predecir el riesgo de un ataque cardíaco** en pacientes, a partir de tres biomarcadores clínicos fundamentales:
 
-- **Edad:** Factor de riesgo asociado al desgaste cardiovascular.
-- **CK-MB:** Enzima liberada ante daño en el músculo cardíaco.
-- **Troponina:** Proteína clave cuya presencia elevada indica daño al corazón.
+    - **Edad:** Factor de riesgo asociado al desgaste cardiovascular.
+    - **CK-MB:** Enzima liberada ante daño en el músculo cardíaco.
+    - **Troponina:** Proteína clave cuya presencia elevada indica daño al corazón.
 
----
+    """)
 
-### Funciones principales:
+st.markdown("")
+with st.expander("Mostrar mas información", expanded=False):
 
-- **Predicción** -> Realiza la predicción de reisgo de ataque cardíaco para el paciente evaluado.
-- **Pobabilidad** -> muestra la probabilidad en un gráfico tipo pastel.
-- **Matriz de confusión** -> Visualiza la para evaluar el desempeño del modelo.
-- **Curvas ROC** -> Grafica que muestra la relación entre la tasa de TP y FP de todos los modelos.
-- **Tiempo de inferencia** -> Evalua el **tiempo de inferencia** para cada modelo.
-            
----
-            
-### Modelos implementados:
-  - Regresión Logística
-  - Naive Bayes
-  - KNN
-  - Árbol de Decisión
-  - SVM
-  - Red Neuronal MLP
----
-            
-### Metricas de evaluación:
-  - **Accuracy**
-  - **Precision**
-  - **Recall**
-  - **F1-score**
-  - **F0.5-score**
-  - **F2-score**
+    st.markdown("""
+   
+    ### Funciones principales:
 
----
+    - **Predicción** -> Realiza la predicción de reisgo de ataque cardíaco para el paciente evaluado.
+    - **Pobabilidad** -> muestra la probabilidad en un gráfico tipo pastel.
+    - **Matriz de confusión** -> Visualiza la para evaluar el desempeño del modelo.
+    - **Curvas ROC** -> Grafica que muestra la relación entre la tasa de TP y FP de todos los modelos.
+    - **Tiempo de inferencia** -> Evalua el **tiempo de inferencia** para cada modelo.
+                
+    ---
+                
+    ### Modelos implementados:
+    - Regresión Logística
+    - Naive Bayes
+    - KNN
+    - Árbol de Decisión
+    - SVM
+    - Red Neuronal MLP
+    ---
+                
+    ### Metricas de evaluación:
+    - **Accuracy**
+    - **Precision**
+    - **Recall**
+    - **F1-score**
+    - **F0.5-score**
+    - **F2-score**
 
-### Uso de la aplicación
+    ---
+    """)
 
-""")
 
+st.markdown("### Uso de la aplicación:")
+st.markdown("")
+st.markdown("")
 if not mostrar_matriz:
     st.markdown("**Nota:** Las matrices de confusión no están disponibles porque no se cargaron los datos de test.")
 
