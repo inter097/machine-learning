@@ -345,17 +345,17 @@ if mostrar_matriz:
     
 st.markdown("")
 st.markdown("")
-st.markdown("""
-<hr style="margin-top: 30px; margin-bottom:60px;">
 
-<h4 style='text-align: left;'>Conclusión:</h4>
+with st.expander("**Conclusión:**", expanded=False):
 
-<div style='text-align: justify; margin-bottom: 200px;'>
-Esta aplicación es una herramienta interactiva para la <b>predicción de ataques cardíacos</b>. 
-Permite evaluar el riesgo cardiovascular de los pacientes de manera rápida y precisa, facilitando la toma de decisiones informadas en el ámbito clínico. 
-Es especialmente adecuada para entornos de apoyo clínico, educación en ciencia de datos o exploración de modelos predictivos.
-</div>
-""", unsafe_allow_html=True)
+    st.markdown("""
+    
+    <div style='text-align: justify; margin-bottom: 30px;'>
+    Esta aplicación es una herramienta interactiva para la <b>predicción de ataques cardíacos</b>. 
+    Permite evaluar el riesgo cardiovascular de los pacientes de manera rápida y precisa, facilitando la toma de decisiones informadas en el ámbito clínico. 
+    Es especialmente adecuada para entornos de apoyo clínico, educación en ciencia de datos o exploración de modelos predictivos.
+    </div>
+    """, unsafe_allow_html=True)
 
 
   
